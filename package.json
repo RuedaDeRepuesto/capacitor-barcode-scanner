@@ -1,7 +1,7 @@
 {
   "name": "capacitor-barcode-scanner",
-  "version": "2.1.2",
-  "description": "barcode scanner for capacitor 5",
+  "version": "2.2.0",
+  "description": "barcode scanner for capacitor 5+",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -66,7 +66,7 @@
     "typescript": "~4.1.5"
   },
   "peerDependencies": {
-    "@capacitor/core": "^5.0.0"
+    "@capacitor/core": ">=5.0.0"
   },
   "prettier": "@ionic/prettier-config",
   "swiftlint": "@ionic/swiftlint-config",
