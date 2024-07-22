@@ -28,10 +28,11 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.button.MaterialButton
-import com.google.mlkit.vision.barcode.Barcode
+
 import com.google.mlkit.vision.barcode.BarcodeScanner
 import com.google.mlkit.vision.barcode.BarcodeScannerOptions
 import com.google.mlkit.vision.barcode.BarcodeScanning
+import com.google.mlkit.vision.barcode.common.Barcode
 import com.google.mlkit.vision.common.InputImage
 import java.lang.Math.*
 import java.util.concurrent.Executors
@@ -257,6 +258,8 @@ class ScannerActivity : AppCompatActivity() {
                 }
             }
             .addOnFailureListener {
+
+                Log.e(TAG,"Error al leer")
                 Log.e(TAG, it.message ?: it.toString())
             }.addOnCompleteListener {
                 imageProxy.close()
