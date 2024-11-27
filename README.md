@@ -4,8 +4,7 @@ Simple Barcode scanner for capacitor, shows popup camera view to scan.
 Supports code 128 and QR
 Uses Google MLKit in android, and AVFoundation on iOS
 
-version 1.0.1 updated for capacitor 5
-version 2.1.2 updated MLKit version in android
+
 ## Install
 
 ```bash
@@ -25,6 +24,14 @@ npx cap sync
 | 2.2.0          | Capacitor 5       |
 | 2.3.0          | Capacitor 6       |
 | 2.3.1          | Capacitor 6       |
+| 2.3.3          | Capacitor 6       |
+
+
+### Changelog
+version 1.0.1 updated for capacitor 5
+version 2.1.2 updated MLKit version in android
+version 2.3.0 capacitor 6 support
+version 2.3.3 Fix Android ladybug build
 
 #### iOS
 In XCode -> App info.plist add key NSCameraUsageDescription
