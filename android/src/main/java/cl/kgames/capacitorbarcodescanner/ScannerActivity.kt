@@ -239,11 +239,17 @@ class ScannerActivity : AppCompatActivity() {
             .addOnSuccessListener { barcodes ->
                 if(barcodes.size > 0){
                     if(!multiScan){
-                        var code = barcodes[0]
-                        closeActivity(code.rawValue!!)
+                        val code = barcodes[0]
+                        val codeStr = extractCodeValue(code)
+                        if(codeStr != null){
+                          closeActivity(codeStr)
+                        }else {
+                          Log.w(TAG, "CÃ³digo escaneado sin contenido legible (rawValue/displayValue null)")
+                        }
+
                     }else{
                         for (i in barcodes){
-                            var codeValue = i.rawValue!!
+                            val codeValue = extractCodeValue(i) ?: continue
                             if(!resultCodes.contains(codeValue)){
                                 popReaded(codeValue)
                                 resultCodes+=codeValue
@@ -269,6 +275,11 @@ class ScannerActivity : AppCompatActivity() {
 
     private fun popReaded(value:String){
         Toast.makeText(this, value, Toast.LENGTH_SHORT).show()
+    }
+
+    private fun extractCodeValue(code: Barcode): String? {
+        return code.rawValue
+        ?: code.displayValue
     }
 
     private val screenAspectRatio: Int
