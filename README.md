@@ -14,15 +14,16 @@ npx cap sync
 
 ### Capacitor Compatibility
 
-| Plugin Version | Capacitor Version |
-|----------------|-------------------|
-| 0.0.2          | Capacitor 3       |
-| 1.0.1          | Capacitor 5       |
-| 2.0.0          | Capacitor 5       |
-| 2.1.1          | Capacitor 5       |
-| 2.1.2          | Capacitor 5       |
-| 2.2.0          | Capacitor 5       |
-| 2.3.*          | Capacitor 6       |
+| Plugin Version | Capacitor Version   |
+|----------------|---------------------|
+| 0.0.2          | Capacitor 3         |
+| 1.0.1          | Capacitor 5         |
+| 2.0.0          | Capacitor 5         |
+| 2.1.1          | Capacitor 5         |
+| 2.1.2          | Capacitor 5         |
+| 2.2.0          | Capacitor 5         |
+| 2.3.*          | Capacitor 6         |
+| 2.4.0          | Capacitor 6-7       |
 
 
 ### Changelog
@@ -32,6 +33,7 @@ npx cap sync
 - Version 2.3.1: Experimental JsQR reading in web
 - Version 2.3.3: Fix Android ladybug build
 - Version 2.3.4: Fix when QR Format is unknown app crashes
+- Version 2.4.0: Capacitor 7 install support
 
 #### iOS
 In XCode -> App info.plist add key NSCameraUsageDescription
