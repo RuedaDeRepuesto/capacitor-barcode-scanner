@@ -24,6 +24,7 @@ npx cap sync
 | 2.2.0          | Capacitor 5         |
 | 2.3.*          | Capacitor 6         |
 | 2.4.0          | Capacitor 6-7       |
+| 2.5.0          | Capacitor 6-7       |
 
 
 ### Changelog
@@ -34,6 +35,7 @@ npx cap sync
 - Version 2.3.3: Fix Android ladybug build
 - Version 2.3.4: Fix when QR Format is unknown app crashes
 - Version 2.4.0: Capacitor 7 install support
+- Version 2.5.0: MLKit updated to v17.3.0
 
 #### iOS
 In XCode -> App info.plist add key NSCameraUsageDescription
