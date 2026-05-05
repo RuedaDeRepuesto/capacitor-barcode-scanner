@@ -165,7 +165,7 @@ class ScannerActivity : AppCompatActivity() {
             .setTargetAspectRatio(screenAspectRatio)
             .setTargetRotation(getWindowManager().getDefaultDisplay().getRotation())
             .build()
-        previewUseCase!!.setSurfaceProvider(previewView!!.createSurfaceProvider())
+        previewUseCase!!.setSurfaceProvider(previewView!!.surfaceProvider)
 
         try {
             cameraProvider!!.bindToLifecycle(/* lifecycleOwner= */this,

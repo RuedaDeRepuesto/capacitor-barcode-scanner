@@ -90,11 +90,9 @@ class BarcodeScannerViewController: UIViewController, AVCaptureMetadataOutputObj
             button.addTarget(self, action: #selector(exitBtnTap), for: .touchUpInside)
             view.addSubview(button)
             
-            let bundle = Bundle(for: BarcodeScannerPlugin.self)
-            let bundleURL = bundle.bundleURL.appendingPathComponent("CapacitorBarcodeScanner.bundle")
-            let resourceBundle = Bundle(url: bundleURL)
-            
-            if let imgSrc = UIImage(named:"scan", in:resourceBundle, compatibleWith: nil){
+            let resourceBundle = Bundle.module
+
+            if let imgSrc = UIImage(named: "scan", in: resourceBundle, compatibleWith: nil) {
                 let imageView = UIImageView(image: imgSrc)
                 imageView.frame = CGRect(x: view.bounds.width - 90 - 16, y: view.bounds.height - 90 - 90, width: 90, height: 90)
                 imageView.contentMode = .scaleAspectFit

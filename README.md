@@ -25,6 +25,7 @@ npx cap sync
 | 2.3.*          | Capacitor 6         |
 | 2.4.0          | Capacitor 6-7       |
 | 2.5.0          | Capacitor 6-7       |
+| 8.0.0          | Capacitor 8         |
 
 
 ### Changelog
@@ -36,9 +37,12 @@ npx cap sync
 - Version 2.3.4: Fix when QR Format is unknown app crashes
 - Version 2.4.0: Capacitor 7 install support
 - Version 2.5.0: MLKit updated to v17.3.0
+- Version 8.0.0: Capacitor 8 support — versioning aligned to Capacitor major. Android: minSdk 24, compileSdk/targetSdk 36, AGP 8.13, Gradle 8.14.3, Kotlin 2.0.21, CameraX 1.6.0, lifecycle 2.8.7, core-ktx 1.15.0, dropped jcenter(). iOS: minimum deployment target bumped to 15.0, migrated to Swift Package Manager (SPM), removed Obj-C bridge macros, conforming to CAPBridgedPlugin.
 
 #### iOS
-In XCode -> App info.plist add key NSCameraUsageDescription
+In XCode → App info.plist add key `NSCameraUsageDescription`
+
+This plugin requires **Swift Package Manager (SPM)**, the default in Capacitor 8. Run `npx cap sync` after installing.
 
 #### Web implementation on 2.3.1
 
